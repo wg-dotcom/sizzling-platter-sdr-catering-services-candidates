@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonalyn F - SDR - Catering Services | Sizzling Platter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FFFFFF;
+      --dark: #000000;
+      --highlight: #FF5722;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Roboto', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FF5722); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Sizzling Platter<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Leonalyn F</div>
+    <div class="candidate-title">SDR - Catering Services | Philippines</div>
+    <div class="candidate-contact">
+      <span>Philippines</span>
+      <span>3 yrs Hospitality Sales experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">Accomplished and detail-oriented Cold Caller, Virtual Assistant, and Customer Support Specialist with six years of demonstrated expertise in Customer Service and Technical Support. Proficient in managing client communications, scheduling, data management, and CRM systems to deliver exceptional service and technical solutions. Possesses strong analytical and problem-solving skills with a meticulous attention to detail. A dependable and collaborative professional dedicated to enhancing operational efficiency, ensuring customer satisfaction, and supporting organizational objectives.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Sales &amp; Lead Generation</div>
+    <div class="skill-value">Cold Calling &amp; Lead Generation, Skip Tracing, Appointment Setting &amp; Follow-ups</div>
+    <div class="skill-label">Customer Service</div>
+    <div class="skill-value">Customer Service &amp; Client Relationship Management, Conflict Resolution, Communication</div>
+    <div class="skill-label">Technical Support</div>
+    <div class="skill-value">Technical Support &amp; Troubleshooting (Hardware, Software, SaaS), POS, VoIP, IPTV, HSIA</div>
+    <div class="skill-label">Virtual Assistance</div>
+    <div class="skill-value">Virtual Assistance, Data Entry &amp; File Management, Scheduling &amp; Calendar Management</div>
+    <div class="skill-label">CRM &amp; Marketing</div>
+    <div class="skill-value">CRM Management (Investor fuse, GHL, Mojo Dialer, Call Tools), Email &amp; Text Marketing Campaigns</div>
+    <div class="skill-label">Software Proficiency</div>
+    <div class="skill-value">Microsoft Office Suite (Word, Excel,), Google Workspace (Docs, Sheets, Gmail)</div>
+    <div class="skill-label">Professional Skills</div>
+    <div class="skill-value">Problem Solving &amp; Analytical Thinking, Attention to Detail, Time Management, Team Collaboration, Adaptability, Professionalism &amp; Customer Focus</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Virtual Assistant/ Real Estate Cold Caller</div>
+        <div class="exp-company">Trusted Home Buyer</div>
+        <div class="exp-meta">May 2023-Feb 2025</div>
+      </div>
+      <ul class="exp-bullets"><li>Generate Leads that increased sales 30% in 6 months.</li><li>Conducted 200-300+ cold calls daily, boosting client engagement.</li><li>Scheduled appointment enhancing agent productivity by 25%.</li><li>Utilized CRM tools to track leads and optimize follow ups</li><li>Maintained 90% call success rate through effective communication</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Virtual Assistant/ Real Estate Cold Caler</div>
+        <div class="exp-company">Hub Properties</div>
+        <div class="exp-meta">July 2019- July 2022</div>
+      </div>
+      <ul class="exp-bullets"><li>Send text blasts and email campaigns to engage potential clients, provide property information, and follow up on prior communications.</li><li>Manage and sort files and date records, ensuring all client information and lead lists are accurate and up to date.</li><li>Conducted 300-400+ calls boosting client engagement.</li><li>Utilized CRM tools to track leads and optimize follow ups</li><li>Trained new team members on cold calling best practices</li><li>Consistently exceeded monthly targets, driving revenue growth.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Chat and Email Support</div>
+        <div class="exp-company">Balsam Brands</div>
+        <div class="exp-meta">Oct. 2018- Dec. 2018</div>
+      </div>
+      <ul class="exp-bullets"><li>Delivered exceptional customer service chat and email support.</li><li>Resolved 95% of inquiries on first contact, boosting customer satisfaction</li><li>Implemented feedback loops, driving continuous service improvement.</li><li>Managed high volume inquiries, maintaining quality efficiency.</li><li>Consistently met and exceeded KPI's contributing to team success.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Service Professional</div>
+        <div class="exp-company">Morgan Stanley</div>
+        <div class="exp-meta">Oct 2015-Feb 2017</div>
+      </div>
+      <ul class="exp-bullets"><li>Perform daily operational tasks to ensure smooth and efficient branch or office workflow, including account maintenance, data entry, and documentation management.</li><li>Provide high-quality client service by addressing inquiries, resolving account issues, and ensuring a positive client experience through timely and professional communication.</li><li>Support Financial Advisors by preparing reports, managing client accounts, and assisting with investment transactions and portfolio updates.</li><li>Deliver accurate account information to clients and Financial Advisors, maintaining confidentiality and compliance with company and regulatory policies.</li><li>Handle telephones, manage mailing, filing, and form processing to support both administrative and financial operations.</li><li>Execute and place trade orders under the direction of licensed Financial Advisors, ensuring accuracy and adherence to established guidelines.</li><li>Collaborate with internal teams to streamline processes, enhance efficiency, and support overall business objectives.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">IT Helpdesk</div>
+        <div class="exp-company">Cognizant Technical Solutions</div>
+        <div class="exp-meta">Aug 2014-Jan 2015</div>
+      </div>
+      <ul class="exp-bullets"><li>Respond to inbound calls, emails, and service requests, providing first-level technical assistance to end users in a timely and professional manner.</li><li>Diagnose and troubleshoot hardware and software issues, including desktops, laptops, peripherals, and operating systems, ensuring minimal downtime and optimal performance.</li><li>Provide technical support for Point-of-Sale (POS) systems, pin pads, handheld scanners, and self-checkout registers, resolving connectivity, configuration, and functionality issues.</li><li>Perform system restarts and maintenance on IVR systems and automated voice prompt platforms to ensure proper call routing and operational efficiency.</li><li>Escalate complex incidents to higher-level support or specialized teams, documenting all troubleshooting steps and resolutions in the ticketing system.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Project Manager</div>
+        <div class="exp-company">Broadview Networks</div>
+        <div class="exp-meta">June 2013-July 2014</div>
+      </div>
+      <ul class="exp-bullets"><li>Manage end-to-end coordination of telecommunication service orders, including POTS lines, T1 circuits, and HSIA (High-Speed Internet Access), ensuring timely and accurate service delivery.</li><li>Communicate proactively with customers to provide regular updates on order status, activation schedules, and technical requirements.</li><li>Coordinate with internal teams and external vendors, including customers' data and phone providers, to schedule installations, activations, and testing.</li><li>Oversee multiple simultaneous projects, ensuring that all deliverables meet client expectations, service-level agreements (SLAs), and company quality standards.</li><li>Handle diverse order types and scenarios, identifying potential issues and implementing effective solutions to maintain project timelines and service accuracy.</li><li>Maintain detailed project documentation, including order forms, service records, and communication logs, for tracking and reporting purposes.</li><li>Serve as the primary point of contact for customers throughout the project lifecycle, providing excellent customer service and ensuring smooth communication between all stakeholders.</li><li>Collaborate with cross-functional teams—such as provisioning, engineering, and customer support—to ensure seamless execution and post-installation support.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Technical Support AT&amp;T Uverse</div>
+        <div class="exp-company">AT&amp;T</div>
+        <div class="exp-meta">Oct 2012-May 2013</div>
+      </div>
+      <ul class="exp-bullets"><li>Provide front-line technical support for AT&amp;T U-verse customers, assisting with VOIP, IPTV, and HSIA (High-Speed Internet Access) services through phone and chat support.</li><li>Diagnose, troubleshoot, and resolve connectivity issues, service interruptions, and equipment malfunctions, including modems, routers, and set-top boxes.</li><li>Guide customers through step-by-step technical solutions, ensuring clear communication and a positive service experience.</li><li>Handle basic billing inquiries, explain charges and service plans, and provide information on account adjustments or payment options.</li><li>Manage and de-escalate customer complaints with professionalism and empathy, ensuring timely resolution and maintaining customer satisfaction.</li><li>Document all interactions and troubleshooting steps in the ticketing system to ensure accurate service records and facilitate issue tracking.</li><li>Collaborate with higher-tier technical teams and field technicians for complex issues requiring escalation or on-site support.</li><li>Maintain a strong understanding of AT&amp;T products, services, and policies to provide accurate and efficient assistance.</li></ul>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">BS- Hotel and Restaurant Management</div>
+      <div class="edu-school"></div>
+      <div class="edu-year">2002-2006</div>
+    </div></div>
+    
+    
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Sizzling Platter</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
