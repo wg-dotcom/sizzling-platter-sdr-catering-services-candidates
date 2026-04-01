@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alana P - SDR - Catering Services | Sizzling Platter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FFFFFF;
+      --dark: #000000;
+      --highlight: #FF5722;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Roboto', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FF5722); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Sizzling Platter<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Alana P</div>
+    <div class="candidate-title">SDR - Catering Services | Jamaica</div>
+    <div class="candidate-contact">
+      <span>Jamaica</span>
+      <span>5 yrs Customer Service experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">Experienced customer service and account management professional with over 7 years in client relationship management, technical support, and administrative operations. Proven track record of achieving high customer satisfaction ratings (92-97%) across diverse industries including e-commerce, hospitality, and corporate services. Skilled in process optimization, lead generation, and high-volume client account management with expertise in CRM systems and workflow streamlining.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Customer Service &amp; Sales</div>
+    <div class="skill-value">High-volume inbound &amp; outbound call handling, Client relationship management &amp; emotional intelligence, Lead follow-ups, upselling</div>
+    <div class="skill-label">Technical &amp; Software</div>
+    <div class="skill-value">CRM management (Salesforce/Zendesk), AI-driven productivity and analytics tools, Microsoft Office Suite &amp; technical support</div>
+    <div class="skill-label">Process Improvement</div>
+    <div class="skill-value">Process optimization, Workflow streamlining, Administrative operations, Record management</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Associate, Account Management</div>
+        <div class="exp-company">Wayfair, Sutherland</div>
+        <div class="exp-meta">Apr 2024 – Jan 2026</div>
+      </div>
+      <ul class="exp-bullets"><li>Managed high-volume client accounts, ensuring 100% prompt inquiry resolution.</li><li>Executed lead follow-ups and identified upselling opportunities to boost revenue.</li><li>Implemented process improvements that reduced operational errors by 15%.</li><li>and achieved a 97% customer satisfaction rating.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Representative</div>
+        <div class="exp-company">D'Liz Cafe</div>
+        <div class="exp-meta">Aug 2023 – Jan 2024</div>
+      </div>
+      <ul class="exp-bullets"><li>Handled inbound inquiries and guided clients through the booking/order process.</li><li>Maintained strict follow-up protocols for missed calls to ensure repeat business.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Administrative Assistant</div>
+        <div class="exp-company">Discovery Investigations Limited</div>
+        <div class="exp-meta">Aug 2021 – Dec 2022</div>
+      </div>
+      <ul class="exp-bullets"><li>Coordinated office operations and executive schedules for high-stakes projects.</li><li>Streamlined record-keeping processes, improving data accuracy and retrieval speed by 95%.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Associate</div>
+        <div class="exp-company">Amazon</div>
+        <div class="exp-meta">Jan 2019 – Sep 2020</div>
+      </div>
+      <ul class="exp-bullets"><li>Resolved complex customer inquiries via phone and email in a high-pressure environment and achieved a 92% customer satisfaction rating.</li><li>Consistently met and exceeded KPIs for customer satisfaction and ticket resolution time.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Representative</div>
+        <div class="exp-company">Sutherland Global</div>
+        <div class="exp-meta">Apr 2017 – Feb 2018</div>
+      </div>
+      <ul class="exp-bullets"><li>Delivered technical support and managed outbound calls for client retention.</li><li>Resolved customer issues efficiently, reducing escalations by 45%</li><li>Provided technical support to customers, achieving a 94% customer satisfaction rating</li></ul>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">High School Diploma</div>
+      <div class="edu-school">Bellefield High School, Mandeville</div>
+      <div class="edu-year">2005 – 2010</div>
+    </div></div>
+    
+    <div class="section"><div class="section-title">Languages</div>
+    <div class="lang-item"><strong>English:</strong> Native</div></div>
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Sizzling Platter</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
