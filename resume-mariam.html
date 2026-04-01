@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariam A - SDR - Catering Services | Sizzling Platter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FFFFFF;
+      --dark: #000000;
+      --highlight: #FF5722;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Roboto', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FF5722); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Sizzling Platter<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Mariam A</div>
+    <div class="candidate-title">SDR - Catering Services | Nigeria</div>
+    <div class="candidate-contact">
+      <span>Nigeria</span>
+      <span>5+ yrs Sales &amp; CRM experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">Dedicated Customer Support and Sales Professional with 5+ years of remote and in-person experience delivering exceptional service through inbound/outbound calls, customer retention, and CRM systems. Skilled in managing high call volumes, resolving issues efficiently, and upselling value-added services. Known for maintaining a calm, empathetic demeanor while driving customer satisfaction and loyalty. Proficient in Zendesk, Hubspot, Convosso, and other support platforms.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Customer Support Tools</div>
+    <div class="skill-value">Zendesk, HubSpot, Convosso, ClickUp, Five9</div>
+    <div class="skill-label">Sales &amp; CRM</div>
+    <div class="skill-value">Lead generation, Upselling, Retention, Prospect qualification</div>
+    <div class="skill-label">Communication</div>
+    <div class="skill-value">Verbal &amp; written fluency, Rapport building, Empathetic listening</div>
+    <div class="skill-label">Remote Work</div>
+    <div class="skill-value">Time management, Multitasking, Self-directed execution</div>
+    <div class="skill-label">Soft Skills</div>
+    <div class="skill-value">Adaptable, Calm under pressure, Curious, Team-oriented, Proactive, Coachable</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Support &amp; Telemarketer (Remote - Contract)</div>
+        <div class="exp-company">Rent to Own Services</div>
+        <div class="exp-meta">March 2024 - May 2025</div>
+      </div>
+      <ul class="exp-bullets"><li>Manage 100+ daily calls (inbound/outbound), offering support and upselling services.</li><li>Resolve customer issues with a 95% satisfaction rate, reducing cancellations and complaints</li><li>Track lead activities and follow-ups using Convosso CRM.</li><li>Maintain clear and empathetic communication under pressure.</li><li>Closing 3 to 5 sales weekly.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Representative (Remote)</div>
+        <div class="exp-company">BAF Fashion (E-commerce)</div>
+        <div class="exp-meta">January 2021 - September 2023</div>
+      </div>
+      <ul class="exp-bullets"><li>Handled 50+ weekly customer support calls and resolved over 350 inquiries monthly using Zendesk and HubSpot.</li><li>Reduced return rate from 40% to 2%, significantly increasing retention and brand loyalty.</li><li>Tracked and prioritized customer issues with Zendesk, ensuring prompt resolution.</li><li>Upsold product bundles and resolved billing, order, and delivery issues with professionalism.</li><li>Managed a variety of customer inquiries, whether by phone, email, or social media, and always worked to resolve issues promptly and professionally.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Sales and Customer Care Representative</div>
+        <div class="exp-company">Olamur Catering Services</div>
+        <div class="exp-meta">2019 – 2021</div>
+      </div>
+      <ul class="exp-bullets"><li>Handled customer complaints professionally and worked hard to ensure every issue was resolved to the customer's satisfaction.</li><li>Provided outstanding customer service that helped grow the customer base by 40%.</li><li>Provided valuable feedback and reports on customer needs, helping the company adapt to customer preferences and improve services.</li><li>Educated customers about product benefits, building trust and increasing repeat business.</li></ul>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">BSc in English</div>
+      <div class="edu-school">Obafemi Awolowo University, Ile-Ife, Nigeria</div>
+      
+    </div></div>
+    <div class="section"><div class="section-title">Certifications</div>
+    <div class="cert-item"><span class="cert-name">SalesOrg.io Tech Sales SDR Course - November 2024</span></div>
+    <div class="cert-item"><span class="cert-name">Duo-Phoenix Ltd Tech Sales Bootcamp (5 months) - March - August 2024</span></div>
+    <div class="cert-item"><span class="cert-name">University of Maryland Professional Certification in Fundamentals of Technology Sales - March - May 2024</span></div>
+    <div class="cert-item"><span class="cert-name">Formazionne Business School Professional Diploma in Customer Service Relationship Management - May 2019 - June 2017</span></div></div>
+    
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Sizzling Platter</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
