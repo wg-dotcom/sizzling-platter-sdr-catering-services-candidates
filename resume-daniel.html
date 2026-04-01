@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel C - SDR - Catering Services | Sizzling Platter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FFFFFF;
+      --dark: #000000;
+      --highlight: #FF5722;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Roboto', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FF5722); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Sizzling Platter<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Daniel C</div>
+    <div class="candidate-title">SDR - Catering Services | Colombia</div>
+    <div class="candidate-contact">
+      <span>Colombia</span>
+      <span>6 yrs Restaurant/Gastronomy Operations experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">Results-driven Sales and Business Development professional with 7+ years of experience in B2B and B2C sales, customer acquisition, and relationship management, with recent experience in remote roles serving the U.S. market. Proven ability to generate leads through cold calling, email, and social outreach, manage full sales cycles, and exceed appointment-setting KPIs. Strong background in hospitality business management, team leadership (up to 30 employees), and operations. Fluent in English with advanced proficiency in CRM and ERP systems.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Sales &amp; Business Development</div>
+    <div class="skill-value">Sales Development (SDR / BDR), Cold Calling, Email &amp; Social Prospecting, Appointment Setting &amp; Pipeline Management, B2B &amp; B2C Sales, Remote Work (U.S. Market)</div>
+    <div class="skill-label">Technology &amp; Tools</div>
+    <div class="skill-value">CRM &amp; ERP Tools (Odoo, Apollo, Insightly, HubSpot), Microsoft Office 365 &amp; Google Workspace</div>
+    <div class="skill-label">Management &amp; Operations</div>
+    <div class="skill-value">Customer Relationship Management, Team Leadership &amp; Operations Management</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Sales Associate</div>
+        <div class="exp-company">Link Studios (Remote – USA)</div>
+        <div class="exp-meta">March 2025 – Present</div>
+      </div>
+      <ul class="exp-bullets"><li>Architectural firm providing outsourced services to U.S. architecture studios.</li><li>Generate qualified leads through cold calling, direct messages, and email outreach.</li><li>Connect with decision-makers at architectural firms to schedule discovery meetings.</li><li>Manage prospects and activities using Insightly CRM.</li><li>Conduct virtual meetings using Google Meet and maintain accurate pipeline data.</li><li>Tools: Insightly CRM, Google Workspace, Google Meet</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Sales Development Representative (SDR)</div>
+        <div class="exp-company">SDR Blueprint (Remote – USA)</div>
+        <div class="exp-meta">November 2024 – February 2025</div>
+      </div>
+      <ul class="exp-bullets"><li>Startup focused on training and placing new SDRs in the tech industry.</li><li>Prospected and qualified leads via cold calls, emails, and social media outreach.</li><li>Scheduled appointments with aspiring SDR candidates.</li><li>Consistently exceeded monthly appointment-setting KPIs.</li><li>Tools: Apollo CRM, Google Workspace, Zoom</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Sales Manager</div>
+        <div class="exp-company">Grupo Gastrology</div>
+        <div class="exp-meta">February 2024 – October 2024</div>
+      </div>
+      <ul class="exp-bullets"><li>Restaurant group with multiple gastronomic brands.</li><li>Generated new revenue by developing and managing relationships with new clients and franchise partners.</li><li>Managed all B2B and B2C commercial accounts.</li><li>Oversaw sales operations using Odoo ERP and CRM.</li><li>Tools: Odoo ERP &amp; CRM, Google Workspace, Google Meet</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Business Development Representative (BDR)</div>
+        <div class="exp-company">Joyería Gastronómica</div>
+        <div class="exp-meta">February 2023 – January 2024</div>
+      </div>
+      <ul class="exp-bullets"><li>Importer and distributor of high-end culinary products for restaurants and hotels.</li><li>Led the B2B commercial area with a portfolio of 150+ active clients.</li><li>Built and maintained long-term relationships with restaurants and hotel groups.</li><li>Identified new leads, scheduled meetings, and converted prospects into customers.</li><li>Managed CRM data and sales follow-ups.</li><li>Tools: Odoo ERP &amp; CRM, Google Workspace, Google Meet</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">General Manager</div>
+        <div class="exp-company">La Boutique de las Carnes</div>
+        <div class="exp-meta">November 2021 – November 2022</div>
+      </div>
+      <ul class="exp-bullets"><li>Restaurant and butcher shop group.</li><li>Managed daily operations of a 150-seat restaurant and butcher shop.</li><li>Oversaw costing, inventory, supplier management, and payroll.</li><li>Supervised and led a team of 30 employees.</li><li>Planned and executed corporate and private events.</li><li>Tools: Gamasoft, Microsoft Office 365, Google Meet</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Owner &amp; General Manager</div>
+        <div class="exp-company">Smokin Hog BBQ</div>
+        <div class="exp-meta">September 2017 – October 2021</div>
+      </div>
+      <ul class="exp-bullets"><li>Food and catering business.</li><li>Founded and managed all aspects of the business, including sales, marketing, production, branding, and accounting.</li><li>Led B2B and B2C sales strategies.</li><li>Planned and executed large-scale events.</li><li>Tools: HubSpot, Microsoft Office 365</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Field Representative</div>
+        <div class="exp-company">RAI</div>
+        <div class="exp-meta">January 2014 – July 2017</div>
+      </div>
+      <ul class="exp-bullets"><li>Company managing royalties for international businesses.</li><li>Managed royalty collections for foreign companies across 100+ flower farms.</li><li>Scheduled and conducted 25+ weekly client appointments via phone and email.</li><li>Tools: Microsoft Office 365, Outlook, Phone Systems</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Representative</div>
+        <div class="exp-company">Convergys</div>
+        <div class="exp-meta">October 2011 – November 2012</div>
+      </div>
+      <ul class="exp-bullets"><li>Call center serving U.S.-based TV and Internet providers.</li><li>Provided customer support and sales assistance in English.</li><li>Resolved technical issues using proprietary troubleshooting software.</li></ul>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">Professional Chef</div>
+      <div class="edu-school">Mausi Sebess</div>
+      <div class="edu-year">December 2008</div>
+    </div>
+    <div class="education-item">
+      <div class="edu-degree">Gastronomic Management</div>
+      <div class="edu-school">Gato Dumas</div>
+      <div class="edu-year">December 2010</div>
+    </div></div>
+    <div class="section"><div class="section-title">Certifications</div>
+    <div class="cert-item"><span class="cert-name">Pit Master Certification – Myron Mixon BBQ Cooking School | Georgia, USA | June 2017</span></div></div>
+    <div class="section"><div class="section-title">Languages</div>
+    <div class="lang-item"><strong>English:</strong> Fluent</div>
+    <div class="lang-item"><strong>Spanish:</strong> Native</div></div>
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Sizzling Platter</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
