@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hernaldo C - SDR - Catering Services | Sizzling Platter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FFFFFF;
+      --dark: #000000;
+      --highlight: #FF5722;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Roboto', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FF5722); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Sizzling Platter<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Hernaldo C</div>
+    <div class="candidate-title">SDR - Catering Services | Nicaragua</div>
+    <div class="candidate-contact">
+      <span>Nicaragua</span>
+      <span>3 yrs Food Service Operations experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">With nearly three years of diverse experience in customer service, I've excelled across various roles, demonstrating strong adaptability and problem-solving skills. My performance and dedication have led to successful department transitions, and my recent role as a top-performing appointment setter for a solar company highlights my tech-savvy solutions. This blend of experiences showcases my ability to thrive in dynamic environments and manage diverse responsibilities effectively.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Technical Skills</div>
+    <div class="skill-value">MS Office S Basic, G- Suite (email, sheets, drive), Basic Canva Edition, PC Repair and Maintenance</div>
+    <div class="skill-label">Professional Skills</div>
+    <div class="skill-value">Effective Communication Skills, Customer Support, Proactive, Self-Thought, Sales, Lead Generation &amp; Qualification, Appointment Scheduling</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Medical Records Specialist</div>
+        <div class="exp-company">Ramos Law</div>
+        <div class="exp-meta">January 2025 - Present</div>
+      </div>
+      <ul class="exp-bullets"><li>Managed end-to-end medical records requests, tracking deadlines and ensuring timely evidence submission for legal cases.</li><li>Reviewed, organized, and uploaded medical documentation into case management systems with strict attention to accuracy and compliance.</li><li>Communicated with healthcare providers and bilingual clients to obtain complete documentation and resolve discrepancies.</li><li>Prepared comprehensive medical evidence files to support attorneys in hearings and case preparation.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Sales Development Representative</div>
+        <div class="exp-company">Top Floor Marketing</div>
+        <div class="exp-meta">Sept. 2025- November 2025</div>
+      </div>
+      <p class="exp-desc">Lead generation &amp; qualification, appointment setting and Schedule management.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Specialist For Immigration Law Firm</div>
+        <div class="exp-company">Alonso &amp; Alonso Attorneys At Law</div>
+        <div class="exp-meta">Aug. 2024- Present</div>
+      </div>
+      <p class="exp-desc">Handle customer, attorneys, and government personnel inquiries. Transfer them to the right departments.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Representative</div>
+        <div class="exp-company">PARICUS</div>
+        <div class="exp-meta">Sept. 2023- Jul. 2024</div>
+      </div>
+      <p class="exp-desc">Providing customer services in the telecommunications industry, such as sign restoration, addition of plans, and refund requests.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Appointment Setter</div>
+        <div class="exp-company">Momentum Solar</div>
+        <div class="exp-meta">April 2023- Sept. 2023</div>
+      </div>
+      <p class="exp-desc">Cold calling to lead qualifications, schedule meetings, and update information about clients' houses that could be in the Solar progam.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Representative</div>
+        <div class="exp-company">Teleperformance</div>
+        <div class="exp-meta">Jan 2023- April 2023</div>
+      </div>
+      <p class="exp-desc">Handle customer and driver inquiries, providing them with real-time solutions as refunds, cancellations, and additions of orders and schedules for drivers.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Representative</div>
+        <div class="exp-company">IBEX Nicaragua</div>
+        <div class="exp-meta">Jan 2022- Jan 2023</div>
+      </div>
+      <p class="exp-desc">Handled customer and driver inquiries, resolving issues efficiently while maintaining high satisfaction levels.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Pharmacist and Medical Delivery</div>
+        <div class="exp-company">Hospital Bautista</div>
+        <div class="exp-meta">Jan 2020- Jan 2022</div>
+      </div>
+      <p class="exp-desc">Handle patient inquiries, providing medicines indicated by the doctors, and to the medical team.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Buffet and Personalized Menu Services</div>
+        <div class="exp-company">Delicias D' Libano</div>
+        <div class="exp-meta">2016 - Present</div>
+      </div>
+      <p class="exp-desc">Design, creation, elaboration, quotations of menu &amp; Main chef.</p>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">Bachelor of System Degree</div>
+      <div class="edu-school">UNI - Universidad Nacional De Ingenieria</div>
+      <div class="edu-year">2023 - Present</div>
+    </div>
+    <div class="education-item">
+      <div class="edu-degree">PC Repair and Maintenance Course</div>
+      <div class="edu-school">UNI - Universidad Nacional De Ingenieria</div>
+      <div class="edu-year">2021</div>
+    </div>
+    <div class="education-item">
+      <div class="edu-degree">Cooking and gastronomy technician</div>
+      <div class="edu-school">ENAH - Escuela Nacional De Hoteleria</div>
+      <div class="edu-year">2014 - 2015</div>
+    </div>
+    <div class="education-item">
+      <div class="edu-degree">High School Degrre</div>
+      <div class="edu-school">Instituto Loyola</div>
+      <div class="edu-year">2008 - 2012</div>
+    </div></div>
+    <div class="section"><div class="section-title">Certifications</div>
+    <div class="cert-item"><span class="cert-name">PC Repair and Maintenance Course</span></div></div>
+    
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Sizzling Platter</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
