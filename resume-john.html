@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John C - SDR - Catering Services | Sizzling Platter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FFFFFF;
+      --dark: #000000;
+      --highlight: #FF5722;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Roboto', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FF5722); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Sizzling Platter<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">John C</div>
+    <div class="candidate-title">SDR - Catering Services | Honduras</div>
+    <div class="candidate-contact">
+      <span>Honduras</span>
+      <span>4+ yrs Restaurant/Sales experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">Resourceful and adaptable professional with over 7 years of experience in customer service, client relations, and team leadership. Skilled at training, supervising, and managing high-volume client accounts across telecommunications, tech support, insurance, and catering industries. Proven ability to deliver high-quality service, resolve issues effectively, and maintain client satisfaction under pressure.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Sales &amp; Communication</div>
+    <div class="skill-value">Cold Calling, Sales Communication, Client Relations, Lead Generation, Customer Service, Account Management</div>
+    <div class="skill-label">Technical &amp; Systems</div>
+    <div class="skill-value">CRM Systems, Bilingual English/Spanish</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Field Agent / Trainer / Supervisor</div>
+        <div class="exp-company">Ditcher &amp; Neira</div>
+        <div class="exp-meta">1 year</div>
+      </div>
+      <p class="exp-desc">Managed on-the-ground field operations, coordinated client interactions, and ensured service delivery standards were met. Trained and supervised new agents, monitored performance, and provided ongoing coaching to improve productivity. Developed communication and leadership skills through active supervision and conflict resolution.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Agent</div>
+        <div class="exp-company">Startek</div>
+        <div class="exp-meta">3 years, 8 months</div>
+      </div>
+      <p class="exp-desc">Handled customer inquiries for T-Mobile users in the U.S., assisting with account connections, activations, billing support, and technical troubleshooting. Delivered frontline service through phone and online channels, ensuring customer satisfaction and accurate issue resolution. Supported financial account adjustments and guided clients through service upgrades and retention offers.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Support Specialist</div>
+        <div class="exp-company">Partner Hero</div>
+        <div class="exp-meta">2 years, 3 months</div>
+      </div>
+      <p class="exp-desc">Served as a support specialist for Easy Cater, a U.S.-based catering company. Processed and tracked catering orders, verified delivery times, and ensured accurate fulfillment. Maintained CRM updates, monitored client accounts, and communicated with restaurants and clients to resolve service concerns quickly and professionally.</p>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Insurance Sales Associate (Cold Calling Role)</div>
+        <div class="exp-company">Globe Life</div>
+        <div class="exp-meta"></div>
+      </div>
+      <p class="exp-desc">Conducted outbound cold calls to potential clients across California, introducing insurance plans and scheduling appointments with field agents. Educated prospects on coverage options, built rapport, and handled objections to secure commitments. Contributed to lead generation and sales growth through consistent follow-ups and persuasive communication skills.</p>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">Elementary</div>
+      <div class="edu-school">Escuela Richard H. Rose</div>
+      
+    </div>
+    <div class="education-item">
+      <div class="edu-degree">High School Degree</div>
+      <div class="edu-school">Alton J. Cooper</div>
+      
+    </div>
+    <div class="education-item">
+      <div class="edu-degree">Business Administration</div>
+      <div class="edu-school"></div>
+      
+    </div></div>
+    
+    <div class="section"><div class="section-title">Languages</div>
+    <div class="lang-item"><strong>English:</strong> Bilingual</div>
+    <div class="lang-item"><strong>Spanish:</strong> Bilingual</div></div>
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Sizzling Platter</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
